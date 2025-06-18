@@ -1,59 +1,36 @@
-# Proyecto Agencia de Viaje
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<details>
-    <summary>🗣️ Versión en Español</summary>
-<details>
-    <summary>🖥 Imagen Modo Pc</summary>
+## Getting Started
 
-![diegudeveloper github io_Html_css_js_Travel_Agency_ (1)](https://user-images.githubusercontent.com/62949966/168805087-ec30339a-4c6b-4dbc-a6ba-3d3f9df71ab6.png)
+First, run the development server:
 
-</details>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-<details>
-    <summary>📱 Imagen Modo Movil</summary>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-![diegudeveloper github io_Html_css_js_Travel_Agency_ (1)](https://user-images.githubusercontent.com/62949966/169262658-7d346bf3-99bb-4c27-b25e-0156ec019325.png)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-</details>
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Bienvenido! 👋
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
-[Travel Agency](https://diegudeveloper.github.io/Html_css_js_Travel_Agency/) Es mi primer proyecto con un nivel un poco más profesional, es el resultado de mis habilidades adquiridas en los diferentes cursos tomados en distintas plataformas online, que con el pasar del tiempo entre lecturas, ejercicios y práctica voy afianzando mis habilidades y conocimientos. 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Este proyecto se basa principalmente en su maquetación, se usó en primera instancia el módulo de Flexbox en Css y el diseño fue seleccionado del canal de Youtube: Online Tutorials, tambien poseé un diseño adaptable a distintos dispositivos.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
-## ¡Si te gusta mi proyecto, tómalo y práctica, con el podrás mejorar tus habilidades y hasta podrías enseñarme diferentes cosas! ¡Ayudame a Mejorar! 🚀
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-</details>
-
-# Project Travel Agency
-
-<details>
-    <summary>🗣️ English Version</summary>
-<details>
-    <summary>🖥 Pc Mode image</summary>
-
-![diegudeveloper github io_Html_css_js_Travel_Agency_ (1)](https://user-images.githubusercontent.com/62949966/168805087-ec30339a-4c6b-4dbc-a6ba-3d3f9df71ab6.png)
-
-</details>
-
-<details>
-    <summary>📱 Mobile Mode Image</summary>
-
-![diegudeveloper github io_Html_css_js_Travel_Agency_ (1)](https://user-images.githubusercontent.com/62949966/169262658-7d346bf3-99bb-4c27-b25e-0156ec019325.png)
-
-</details>
-
-## Welcome! 👋
-
-
-[Travel Agency](https://diegudeveloper.github.io/Html_css_js_Travel_Agency/) t is my first project with a more professional level, it is the result of my skills acquired in the different courses taken in different online platforms, that with the passage of time between readings, exercises and practice I am strengthening my skills and knowledge. 
-
-This project is mainly based on its layout, the Flexbox module in Css was used in first instance and the design was selected from the Youtube channel: Online Tutorials.
-
-
-## ¡If you like my project, take it and practice, with it you can improve your skills and you could even teach me different things! Help me improve! 🚀
-
-</details>
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
