@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+--main-font: 'Nunito', sans-serif;
+--font-size: 16px;
+--min-color: #ffa500;
+--second-color: #333;
+--main-modal-color: rgba(247, 222, 30, 0.85);
+--second-modal-color: rgba(34, 34, 34, 0.85);
+--container-width: 1200px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+}

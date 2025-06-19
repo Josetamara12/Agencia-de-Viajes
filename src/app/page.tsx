@@ -6,7 +6,6 @@ export default function HomePage() {
   return (
     <main>
       <Navbar />
-      <main className="pt-[80px]"></main>
     </main>
   );
 }
