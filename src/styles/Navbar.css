@@ -1,11 +1,11 @@
+/*Navbar general*/
 .navbar {
   width: 100%;
   height: 10vh;  
-  background-color: var(--second-modal-color);
+  background-color: var(--negro-secundario);
   position: relative;
   z-index: 1001;
-  font-family: var(--main-font);
-  font-size: var(--font-size);
+  font-family: var(--fuente-letra);
 }
 
 .container_header {
@@ -20,89 +20,133 @@
 
 .logo {
   font-size: 3rem;
-  color: #fff;
+  color: var(--blanco);
   text-decoration: none;
 }
 
 .logo span {
-  color: var(--main-modal-color);
+  color: var(--amarillo);
 }
 
 .navbar_links a {
   margin-left: 1rem;
   text-decoration: none;
-  color: #fff;
-  font-weight: 500;
+  color: var(--blanco);
 }
 
 .navbar_links a:hover {
-  color: var(--min-color);
+  color: var(--amarillo);
 }
 
-.icons a {
+.icons span {
   margin-left: 1rem;
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--blanco);
+  cursor: pointer;
 }
 
-.icons a:hover {
-    color: var(--min-color);
+.icons span:hover {
+    color: var(--amarillo);
 }
 
+/*Barra de busqueda*/
 .search {
-  width: 80%;
+  width: 100%;
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  opacity: 0;
-  background-color: var(--second-color);
+  background-color: var(--negro-secundario);
   padding: 1.5rem;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--blanco);
+  padding: 1.5rem 2rem;
   display: flex;
-  justify-content: inherit;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
   z-index: 999;
   transition: all 0.3s ease;
-  color: var(--min-color);
 }
 
 .search input {
-  padding: 0.4rem 1rem;
-  border: 1px solid #ccc;
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--blanco);
   border-radius: 4px;
-  width: 90%;
-  height: 3rem;
-  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--blanco);
+  background-color: transparent;
+}
+
+.search input::placeholder {
+  color: var(--blanco);
 }
 
 .search-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #888;
+  font-size: 1.2rem;
+  color: var(--amarillo);
 }
 
+.close-search {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--amarillo);
+  cursor: pointer;
+}
+
+/*Boton hamburguesa y version mobile.*/
 .btn_menu {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
-  color: #fff;
-
+  color: var(--blanco);
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  transition: transform 0.2s ease color 0.2s ease;
 }
 
+.btn_menu:hover {
+  transform: scale(1.2);
+  color: var(--amarillo);
+}
+
+/*Logo alternativo solo para mobile*/
 .midium {
   display: none;
   font-size: 1.6rem;
   text-decoration: none;
-  color: #ccc
+  color: var(--blanco)
 }
 
+.midium span {
+  color: var(--amarillo);
+}
+
+/*Responsive*/
 @media (max-width: 768px) {
   .navbar_links {
     display: none;
+    flex-direction: column;
+    background-color: var(--negro-secundario);
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    z-index: 1002;
+  
+  }
+
+  .navbar_links.show {
+    display: flex;
+    font-size: 1.2rem;
+
+  }
+
+  .navbar_links a {
+    margin: 1rem 0;
   }
 
   .btn_menu {
