@@ -1,0 +1,77 @@
+.login-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--negro-secundario);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index: 2000;  
+}
+
+.login-modal {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+}
+
+.login-modal h2 {
+  margin-bottom: 1rem;
+  color: var(--negro-secundario);
+}
+
+.login-modal form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--amarillo);
+  border-radius: 4px;
+}
+
+.login-modal form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--amarillo);
+  color: var(--blanco);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--amarillo);
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--amarillo);
+}
+
+.login-modal a {
+  display: block;
+  color: var(--amarillo);
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.login-modal a:hover {
+  text-decoration: underline;
+}
