@@ -40,3 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 node_modules
+
+# videos grandes ignorados
+/public/videos/vid-1.mp4
+*.mp4 
