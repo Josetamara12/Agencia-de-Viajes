@@ -11,7 +11,7 @@ const Hero = () => {
             </div>
 
             <div className='video-container'>
-                <video src='/videos/vid-3.mp4' id='video-slider' loop autoPlay muted></video>
+                <video src='/videos/vid-1.mp4' id='video-slider' loop autoPlay muted></video>
             </div>
         </section>
     );
