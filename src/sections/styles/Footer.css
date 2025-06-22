@@ -17,34 +17,35 @@
 .footer__col {
   flex: 1 1 250px;
   min-width: 220px;
+  color: var(--amarillo);
 }
 
 .footer__col h3 {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #f39c12;
+  color: var(--amarillo);
 }
 
 .footer__col p,
 .footer__col a {
   display: block;
   margin-bottom: 8px;
-  color: #ccc;
+  color: var(--blanco);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer__col a:hover {
-  color: #f39c12;
+  color: var(--amarillo-secundario);
 }
 
 .footer__col--logo h3 {
   font-size: 24px;
-  color: #fff;
+  color: var(--blanco);
 }
 
 .footer__col--logo span {
-  color: #f39c12;
+  color: var(--amarillo);
 }
 
 .footer__social {
@@ -54,21 +55,21 @@
 .footer__social a {
   display: inline-block;
   margin-right: 10px;
-  color: #ccc;
+  color: var(--blanco);
 }
 
 .footer__web {
   margin-top: 10px;
   font-size: 14px;
-  color: #aaa;
+  color: var(--blanco);
 }
 
 .footer__bottom {
   text-align: center;
   padding-top: 20px;
   font-size: 14px;
-  border-top: 1px solid #444;
-  color: #aaa;
+  border-top: 1px solid var(--amarillo);
+  color: var(--amarillo);
   margin-top: 20px;
 }
 

@@ -1,13 +1,14 @@
 import React from 'react'; 
-import '../styles/Hero.css';
+import './styles/Hero.css';
+import Button from '@/components/ui/Button';
 
 const Hero = () => {
     return (
         <section className='hero'>
             <div className='content'>
                 <h3>La aventura vale la pena</h3>
-                <p>Descrube nuevos lugares con nosotros, la aventura te espera</p>
-                <a href="#" className='btn'>Descubre mas</a>
+                <p>Descubre nuevos lugares con nosotros, la aventura te espera</p>
+                <Button type='button'>Descubre Mas</Button>
             </div>
 
             <div className='video-container'>

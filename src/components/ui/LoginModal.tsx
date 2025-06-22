@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import '../styles/LoginModal.css';
+import Button from './Button';
 
 interface LoginModalProps {
     isOpen: boolean;
@@ -30,13 +31,13 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                 <form>
                     <input type="email" placeholder="Correo Electronico" required />
                     <input type="password" placeholder="Contraseña" required />
-                    <button type="submit">Ingresar</button><br/><br/>
+                    <Button type='submit'>Ingresar</Button>
                     <div className="remember-me">
                         <input type="checkbox" id="remember" />
                         <label htmlFor="remember">Recuérdame</label>
                     </div>
                 </form>
-                <a href="#">¿Olvidaste tu contraseña?</a><br />
+                <a href="#">¿Olvidaste tu contraseña?</a>
                 <a href="#">Registrate ahora</a>
             </div>
         </div>

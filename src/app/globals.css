@@ -3,17 +3,56 @@
 @tailwind utilities;
 
 :root {
+  /* === Tipografía === */
+  --fuente-letra: 'Nunito', sans-serif;
 
-/*Caracteristicas de la fuente*/  
---fuente-letra: 'Nunito', sans-serif;
+  /* === Colores principales === */
+  --amarillo: #ffa500;
+  --amarillo-secundario: rgba(247, 222, 30, 0.85);
+  --negro: #333333;
+  --negro-secundario: rgba(34, 34, 34, 0.85);
+  --blanco: #ffffff;
 
-/*Colores de la app*/ 
---amarillo: #ffa500;
---negro: #333;
---amarillo-secundario: rgba(247, 222, 30, 0.85);
---negro-secundario: rgba(34, 34, 34, 0.85);
---blanco: #fff;
+  /* === Colores extendidos === */
+
+  /* Tonos de gris */
+  --gris-claro: #f5f5f5;
+  --gris: #cccccc;
+  --gris-oscuro: #555555;
+
+  /* Tonos de amarillo */
+  --amarillo-claro: #ffe58f;
+  --amarillo-oscuro: #cc8400;
+
+  /* Estado: Éxito */
+  --verde: #28a745;
+  --verde-claro: #d4edda;
+  --verde-oscuro: #1e7e34;
+
+  /* Estado: Error */
+  --rojo: #dc3545;
+  --rojo-claro: #f8d7da;
+  --rojo-oscuro: #a71d2a;
+
+  /* Estado: Advertencia */
+  --naranja: #fd7e14;
+  --naranja-claro: #ffe5b4;
+  --naranja-oscuro: #c65d0d;
+
+  /* Estado: Información */
+  --azul: #007bff;
+  --azul-claro: #d1ecf1;
+  --azul-oscuro: #0056b3;
+
+  /* Transparencias útiles */
+  --negro-transparente: rgba(0, 0, 0, 0.6);
+  --blanco-transparente: rgba(255, 255, 255, 0.6);
+
+  /* === Layout === */
+  --max-width: 1200px;
+  --espaciado-base: 1rem;
 }
+
 
 * {
   margin: 0;

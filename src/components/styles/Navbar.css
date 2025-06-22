@@ -35,7 +35,7 @@
 }
 
 .navbar_links a:hover {
-  color: var(--amarillo);
+  color: var(--amarillo-oscuro);
 }
 
 .icons span {
@@ -57,7 +57,7 @@
   left: 0;
   background-color: var(--negro-secundario);
   padding: 1.5rem;
-  border-top: 1px solid var(--blanco);
+  border-top: 1px solid var(--amarillo);
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;

@@ -1,0 +1,24 @@
+.custom-button {
+    width: 80%;
+    background-color: var(--amarillo);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--fuente-letra);
+    margin-bottom: 1.5rem;
+    align-self: center;
+    
+}
+
+.custom-button:hover {
+    background-color: var(--amarillo-secundario);
+}
+
+.custom-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

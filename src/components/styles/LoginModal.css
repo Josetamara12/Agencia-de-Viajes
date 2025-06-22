@@ -17,41 +17,12 @@
   border-radius: 8px;
   width: 90%;
   max-width: 400px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   text-align: center;
-}
-
-.login-modal h2 {
-  margin-bottom: 1rem;
-  color: var(--negro-secundario);
-}
-
-.login-modal form input {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--amarillo);
-  border-radius: 4px;
-}
-
-.login-modal form button {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: var(--amarillo);
-  color: var(--blanco);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.remember-me {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--amarillo);
-  margin-bottom: 1rem;
-  justify-content: flex-start;
-  font-size: 0.9rem;
 }
 
 .close-btn {
@@ -65,13 +36,49 @@
   color: var(--amarillo);
 }
 
-.login-modal a {
-  display: block;
-  color: var(--amarillo);
-  text-decoration: none;
-  margin-top: 0.5rem;
+.login-modal h2 {
+  margin-bottom: 1rem;
+  color: var(--negro-secundario);
 }
 
-.login-modal a:hover {
+.login-modal form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-modal form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--amarillo);
+  border-radius: 4px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--amarillo);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.login-links a {
+  color: var(--amarillo);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.login-links a:hover {
   text-decoration: underline;
 }
