@@ -1,7 +1,7 @@
 /*Navbar general*/
 .navbar {
   width: 100%;
-  height: 10vh;  
+  height: 10vh;
   background-color: var(--negro-secundario);
   position: relative;
   z-index: 1001;
@@ -9,39 +9,31 @@
 }
 
 .container_header {
-  width: 80%;
+  width: 90%;
   height: 10vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;  
+  z-index: 1000;
 }
 
-/*Logo*/
-.logo {
-  font-size: 2.5rem;
-  color: var(--blanco);
-  text-decoration: none;
+/* Logo principal desktop y mobile con alternancia */
+.navbar-logo {
+  object-fit: contain;
+  cursor: pointer;
+  height: auto;
 }
 
-.logo span {
-  color: var(--amarillo);
+.logo-desktop {
+  display: block;
 }
 
-/*Logo alternativo para moviles */
-.midium {
+.logo-mobile {
   display: none;
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: var(--blanco)
 }
 
-.midium span {
-  color: var(--amarillo);
-}
-
-/*Links*/
+/* Enlaces del menú */
 .navbar_links a {
   margin-left: 1rem;
   text-decoration: none;
@@ -53,7 +45,7 @@
   color: var(--amarillo-oscuro);
 }
 
-/*Iconos*/
+/* Iconos */
 .icons span {
   margin-left: 1rem;
   font-size: 1.2rem;
@@ -63,7 +55,7 @@
 }
 
 .icons span:hover {
-    color: var(--amarillo);
+  color: var(--amarillo);
 }
 
 /*Barra de busqueda*/
@@ -110,7 +102,7 @@
   cursor: pointer;
 }
 
-/*Boton Menu (hamburguesa)*/
+/* Boton Menu de hamburguesa (mobile) */
 .btn_menu {
   display: none;
   font-size: 1.8rem;
@@ -155,11 +147,11 @@
     display: block;
   }
 
-  .logo {
+  .logo-desktop {
     display: none;
   }
 
-  .midium {
+  .logo-mobile {
     display: block;
   }
 }
