@@ -11,15 +11,16 @@
 .container_header {
   width: 80%;
   height: 10vh;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;  
 }
 
+/*Logo*/
 .logo {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--blanco);
   text-decoration: none;
 }
@@ -28,21 +29,37 @@
   color: var(--amarillo);
 }
 
+/*Logo alternativo para moviles */
+.midium {
+  display: none;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--blanco)
+}
+
+.midium span {
+  color: var(--amarillo);
+}
+
+/*Links*/
 .navbar_links a {
   margin-left: 1rem;
   text-decoration: none;
   color: var(--blanco);
+  transition: color 0.3s ease;
 }
 
 .navbar_links a:hover {
   color: var(--amarillo-oscuro);
 }
 
+/*Iconos*/
 .icons span {
   margin-left: 1rem;
   font-size: 1.2rem;
   color: var(--blanco);
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .icons span:hover {
@@ -56,13 +73,12 @@
   top: 100%;
   left: 0;
   background-color: var(--negro-secundario);
-  padding: 1.5rem;
-  border-top: 1px solid var(--amarillo);
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  border-top: 1px solid var(--amarillo);
   z-index: 999;
   transition: all 0.3s ease;
 }
@@ -94,32 +110,20 @@
   cursor: pointer;
 }
 
-/*Boton hamburguesa y version mobile.*/
+/*Boton Menu (hamburguesa)*/
 .btn_menu {
   display: none;
   font-size: 1.8rem;
-  cursor: pointer;
   color: var(--blanco);
   background-color: transparent;
   border: none;
   padding: 0.5rem;
+  cursor: pointer;
   transition: transform 0.2s ease color 0.2s ease;
 }
 
 .btn_menu:hover {
-  transform: scale(1.2);
-  color: var(--amarillo);
-}
-
-/*Logo alternativo solo para mobile*/
-.midium {
-  display: none;
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: var(--blanco)
-}
-
-.midium span {
+  transform: scale(1.1);
   color: var(--amarillo);
 }
 
@@ -128,7 +132,7 @@
   .navbar_links {
     display: none;
     flex-direction: column;
-    background-color: var(--negro-secundario);
+    background-color: var(--negro);
     position: absolute;
     top: 10vh;
     left: 0;
@@ -136,17 +140,15 @@
     padding: 1rem;
     text-align: center;
     z-index: 1002;
-  
   }
 
   .navbar_links.show {
     display: flex;
-    font-size: 1.2rem;
-
   }
 
   .navbar_links a {
     margin: 1rem 0;
+    font-size: 1.1rem;
   }
 
   .btn_menu {
