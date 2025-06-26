@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Navbar.css';
 import { FaBars, FaSearch, FaUser } from 'react-icons/fa';
 import LoginModal from './LoginModal';
+import Image from "next/image";
 
 const Navbar = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -29,22 +30,40 @@ const Navbar = () => {
         {/* logica del Ícono hamburguesa (solo para vista mobile */}
         <i className="btn_menu" onClick={() => setIsMenuOpen(!isMenuOpen)}><FaBars /></i>
 
-        {/* Logo principal */}
-        <a href="#" className="logo"><span>V</span>iajes</a>
+        {/* Logo principal para pantallas grandes */}
+        <div className='logo-desktop'>
+        <Image
+          src='/img/logo-marana.png' 
+          alt="Logo Maraná"
+          width={180}
+          height={80}
+          className='navbar-logo'
+          priority
+        />
+        </div>
 
         {/* Menú de navegación */}
         <nav className={`navbar_links ${isMenuOpen ? 'show' : ''}`}>
           <a href="#home">Inicio</a>
           <a href="#book">Libro</a>
-          <a href="#packages">Paquetes</a>
+          <a href="#packages">Paquetes</a> 
           <a href="#services">Servicios</a>
           <a href="#gallery">Galería</a>
           <a href="#review">Revisar</a>
           <a href="#contact">Contacto</a>
         </nav>
 
-        {/* Logo alternativo solo para mobile */}
-        <a href="#" className="midium"><span>T</span>ravel</a>
+        {/* Logo para mobile */}
+        <div className='logo-mobile'>
+          <Image
+          src='/img/logo-marana.png'
+          alt='Logo Maraná mobile'
+          width={140}
+          height={50}
+          className='navbar-logo'
+          priority 
+          />
+          </div>         
 
         {/* Íconos de búsqueda y usuario */}
         <div className="icons">
