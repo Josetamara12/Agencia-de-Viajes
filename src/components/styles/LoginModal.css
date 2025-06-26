@@ -82,3 +82,38 @@
 .login-links a:hover {
   text-decoration: underline;
 }
+
+/*Version mobile */
+@media (max-width: 480px) {
+  .login-modal {
+    padding: 1.5rem;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 6px;
+  }
+
+  .close-btn {
+    font-size: 1.5rem;
+    top: 0.3rem;
+    right: 0.7rem;
+  }
+
+  .login-modal h2 {
+    font-size: 1.3rem;
+  }
+
+  .login-modal form input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .login-links a {
+    font-size: 0.85rem;
+  }
+
+  .remember-me {
+    font-size: 0.8rem;
+  }
+
+}
