@@ -33,9 +33,9 @@ const Navbar = () => {
         {/* Logo principal para pantallas grandes */}
         <div className='logo-desktop'>
         <Image
-          src='/img/logo-marana.png' 
-          alt="Logo Maraná"
-          width={180}
+          src='/img/logo-anabe.png' 
+          alt="Logo Anabé"
+          width={130}
           height={80}
           className='navbar-logo'
           priority
@@ -56,9 +56,9 @@ const Navbar = () => {
         {/* Logo para mobile */}
         <div className='logo-mobile'>
           <Image
-          src='/img/logo-marana.png'
-          alt='Logo Maraná mobile'
-          width={140}
+          src='/img/logo-anabe.png'
+          alt='Logo Anabé mobile'
+          width={100}
           height={50}
           className='navbar-logo'
           priority 
