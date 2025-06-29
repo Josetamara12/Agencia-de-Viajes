@@ -1,6 +1,8 @@
 import React from 'react';
 import './styles/Footer.css';
 import Image from "next/image";
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+
 
 const Footer = () => {
   return (
@@ -10,9 +12,18 @@ const Footer = () => {
         {/* Columna 1: Contacto */}
         <div className="footer_col">
           <h3>Contáctanos</h3>
-          <p>Email: contacto@viajes.com</p>
-          <p>Teléfono: +57 300 000 0000</p>
-          <p>Dirección: Calle Falsa 123, Medellín</p>
+          <div className="contact_row">
+            <span className="label">Email</span>
+            <span className="value">contacto@viajes.com</span>
+          </div>
+          <div className="contact_row">
+            <span className="label">Teléfono</span>
+            <span className="value">+57 300 000 0000</span>
+          </div>
+          <div className="contact_row">
+            <span className="label">Dirección</span>
+            <span className="value">Calle Falsa 123, Medellín</span>
+          </div>
         </div>
 
         {/* Columna 2: Accesos rápidos */}
@@ -32,7 +43,7 @@ const Footer = () => {
             <Image
               src='/img/logo-anabe.png'
               alt='Logo Anabé'
-              width={130}
+              width={180}
               height={50}
               className='footer-logo'
               priority
@@ -42,9 +53,17 @@ const Footer = () => {
           {/* Redes Sociales */}
           <div className="footer_social">
             <h4>Síguenos</h4>
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://youtube.com">YouTube</a>
+            <div className="footer_icons">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <FaFacebook />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <FaYoutube />
+              </a>
+            </div>
           </div>
 
           {/* Sitio Web */}

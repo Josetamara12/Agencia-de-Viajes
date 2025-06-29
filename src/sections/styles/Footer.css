@@ -1,7 +1,7 @@
 .footer {
   background: var(--negro);
   color: var(--blanco);
-  padding: 3rem 1.5rem 1rem;
+  padding: 3rem 3rem 1rem;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -38,7 +38,26 @@
 }
 
 .footer_col a:hover {
-  color: var(--amarillo-secundario);
+  color: var(--amarillo);
+}
+
+/* Contacto: Estilo por filas */
+.contact_row {
+  margin-bottom: 0.75rem;
+}
+
+.contact_row .label {
+  color: var(--blanco);
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.contact_row .value {
+  color: var(--amarillo);
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.2rem;
 }
 
 /* Columna del logo alineada arriba */
@@ -47,53 +66,50 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-top: 0;
 }
 
 /* Contenedor del logo */
 .footer_brand {
-  display: flex;
-  justify-content: flex-start;
   margin-bottom: 1rem;
-}
-
-.footer-logo {
-  width: 150px;
-  height: auto;
-  cursor: pointer;
+  display: flex;
+  align-self: flex-start;
 }
 
 /* Redes sociales */
 .footer_social {
-  text-align: left;
   margin-top: 1rem;
 }
 
 .footer_social h4 {
   color: var(--amarillo);
-  font-size: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
-.footer_social a {
-  display: inline-block;
-  margin: 0 0.5rem 0 0;
-  font-size: 0.9rem;
+.footer_icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer_icons a {
+  font-size: 2.2rem;
   color: var(--blanco);
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer_social a:hover {
+.footer_icons a:hover {
   color: var(--amarillo);
 }
 
 /* Sitio web */
-.footer_sitio {
+.footer_sitio a {
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
   font-size: 0.85rem;
-}
-
-.footer_sitio a {
+  text-align: center;
   color: var(--blanco);
   text-decoration: none;
 }
@@ -130,22 +146,26 @@
   }
 
   .footer_brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer_social h4 {
+    text-align: center;
+  }
+
+  .footer_icons {
     justify-content: center;
   }
 
-  .footer_social {
+  .footer_sitio a {
     text-align: center;
   }
 
-  .footer_sitio {
+  .contact_row .label,
+  .contact_row .value {
     text-align: center;
-  }
-
-  .footer-logo {
-    max-width: 120px;
-  }
-
-  .footer_social a {
-    margin: 0 0.75rem;
   }
 }
