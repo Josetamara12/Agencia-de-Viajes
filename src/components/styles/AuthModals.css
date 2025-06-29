@@ -1,4 +1,5 @@
-.login-modal-overlay {
+/* === Overlay general del modal (base) === */
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,25 +8,23 @@
   background: var(--negro-secundario);
   display: flex;
   align-items: center;
-  justify-content: center; 
-  z-index: 2000;  
+  justify-content: center;
+  z-index: 2000;
 }
 
-.login-modal {
-  background: var(--blanco);
-  padding: 2rem;
+/* === Contenedor del contenido (base) === */
+.modal-content {
+  background: transparent; /* fondo transparente para que .auth-modal controle visual */
   border-radius: 8px;
   width: 90%;
   max-width: 400px;
-  height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
-  text-align: center;
 }
 
-.close-btn {
+/* === Botón para cerrar === */
+.modal-close-btn {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
@@ -34,28 +33,46 @@
   border: none;
   cursor: pointer;
   color: var(--amarillo);
+  z-index: 1;
 }
 
-.login-modal h2 {
+/* === Contenido visual de cada modal (login, registro, recuperar) === */
+.auth-modal {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === Título === */
+.auth-modal h2 {
   margin-bottom: 1rem;
   color: var(--negro-secundario);
 }
 
-.login-modal form {
+/* === Formulario === */
+.auth-modal form {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.login-modal form input {
+.auth-modal form input {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1rem;
   border: 1px solid var(--amarillo);
   border-radius: 4px;
+  font-size: 1rem;
 }
 
+/* === Checkbox "Recuérdame" (solo login) === */
 .remember-me {
   display: flex;
   align-items: center;
@@ -66,54 +83,54 @@
   justify-content: flex-start;
 }
 
-.login-links {
+/* === Enlaces de acción (registro, recuperar) === */
+.auth-links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: flex-start;
+  margin-top: 1rem;
 }
 
-.login-links a {
+.auth-links a {
   color: var(--amarillo);
   text-decoration: none;
   font-size: 0.9rem;
 }
 
-.login-links a:hover {
+.auth-links a:hover {
   text-decoration: underline;
 }
 
-/*Version mobile */
+/* === Mobile (responsive) === */
 @media (max-width: 480px) {
-  .login-modal {
+  .auth-modal {
     padding: 1.5rem;
-    height: auto;
+    border-radius: 6px;
     max-height: 90vh;
     overflow-y: auto;
-    border-radius: 6px;
   }
 
-  .close-btn {
+  .modal-close-btn {
     font-size: 1.5rem;
     top: 0.3rem;
     right: 0.7rem;
   }
 
-  .login-modal h2 {
+  .auth-modal h2 {
     font-size: 1.3rem;
   }
 
-  .login-modal form input {
+  .auth-modal form input {
     padding: 0.6rem;
     font-size: 0.9rem;
   }
 
-  .login-links a {
+  .auth-links a {
     font-size: 0.85rem;
   }
 
   .remember-me {
     font-size: 0.8rem;
   }
-
 }

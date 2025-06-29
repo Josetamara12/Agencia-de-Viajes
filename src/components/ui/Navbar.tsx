@@ -1,18 +1,24 @@
-'use client'
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Navbar.css';
+import '../styles/AuthModals.css';
 import { FaBars, FaSearch, FaUser } from 'react-icons/fa';
+import Image from 'next/image';
+
 import LoginModal from './LoginModal';
-import Image from "next/image";
+import RegisterModal from './RegisterModal';
+import ForgotPasswordModal from './ForgotPasswordModal';
 
 const Navbar = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const [isForgotOpen, setIsForgotOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const searchRef = useRef<HTMLDivElement>(null);
 
-  // Cierra la barra de búsqueda al presionar Esc
+  // Cierra búsqueda con Escape
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -26,71 +32,90 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <section className="container_header">
+        {/* Ícono hamburguesa (mobile) */}
+        <i className="btn_menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <FaBars />
+        </i>
 
-        {/* logica del Ícono hamburguesa (solo para vista mobile */}
-        <i className="btn_menu" onClick={() => setIsMenuOpen(!isMenuOpen)}><FaBars /></i>
-
-        {/* Logo principal para pantallas grandes */}
-        <div className='logo-desktop'>
-        <Image
-          src='/img/logo-anabe.png' 
-          alt="Logo Anabé"
-          width={130}
-          height={80}
-          className='navbar-logo'
-          priority
-        />
+        {/* Logo (desktop) */}
+        <div className="logo-desktop">
+          <Image
+            src="/img/logo-anabe.png"
+            alt="Logo Anabé"
+            width={130}
+            height={80}
+            className="navbar-logo"
+            priority
+          />
         </div>
 
-        {/* Menú de navegación */}
+        {/* Menú navegación */}
         <nav className={`navbar_links ${isMenuOpen ? 'show' : ''}`}>
           <a href="#home">Inicio</a>
           <a href="#book">Libro</a>
-          <a href="#packages">Paquetes</a> 
+          <a href="#packages">Paquetes</a>
           <a href="#services">Servicios</a>
           <a href="#gallery">Galería</a>
           <a href="#review">Revisar</a>
           <a href="#contact">Contacto</a>
         </nav>
 
-        {/* Logo para mobile */}
-        <div className='logo-mobile'>
+        {/* Logo (mobile) */}
+        <div className="logo-mobile">
           <Image
-          src='/img/logo-anabe.png'
-          alt='Logo Anabé mobile'
-          width={100}
-          height={50}
-          className='navbar-logo'
-          priority 
+            src="/img/logo-anabe.png"
+            alt="Logo Anabé mobile"
+            width={100}
+            height={50}
+            className="navbar-logo"
+            priority
           />
-          </div>         
+        </div>
 
         {/* Íconos de búsqueda y usuario */}
         <div className="icons">
           <span onClick={() => setIsSearchOpen(!isSearchOpen)}>
-            {isSearchOpen ? (
-              <span className="close-icon">&times;</span>
-            ) : (
-              <FaSearch />
-            )}
+            {isSearchOpen ? <span className="close-icon">&times;</span> : <FaSearch />}
           </span>
           <span onClick={() => setIsLoginOpen(true)}>
             <FaUser />
           </span>
         </div>
 
-        {/* Caja de búsqueda */}
+        {/* Barra de búsqueda */}
         {isSearchOpen && (
           <div className="search">
             <input type="search" placeholder="Busca aquí..." />
-            <label className="search-icon"><FaSearch /></label>
+            <label className="search-icon">
+              <FaSearch />
+            </label>
           </div>
         )}
-
-
       </section>
 
-      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+      {/* Modales de autenticación */}
+      <LoginModal
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onOpenRegister={() => {
+          setIsLoginOpen(false);
+          setIsRegisterOpen(true);
+        }}
+        onOpenForgotPassword={() => {
+          setIsLoginOpen(false);
+          setIsForgotOpen(true);
+        }}
+      />
+
+      <RegisterModal
+        isOpen={isRegisterOpen}
+        onClose={() => setIsRegisterOpen(false)}
+      />
+
+      <ForgotPasswordModal
+        isOpen={isForgotOpen}
+        onClose={() => setIsForgotOpen(false)}
+      />
     </header>
   );
 };
