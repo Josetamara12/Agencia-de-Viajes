@@ -1,4 +1,4 @@
-/* === Overlay general del modal (base) === */
+/* Overlay general del modal (base) */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -12,9 +12,9 @@
   z-index: 2000;
 }
 
-/* === Contenedor del contenido (base) === */
+/* Contenedor del contenido (base) */
 .modal-content {
-  background: transparent; /* fondo transparente para que .auth-modal controle visual */
+  background: transparent;
   border-radius: 8px;
   width: 90%;
   max-width: 400px;
@@ -23,7 +23,7 @@
   position: relative;
 }
 
-/* === Botón para cerrar === */
+/* Botón para cerrar */
 .modal-close-btn {
   position: absolute;
   top: 0.5rem;
@@ -36,7 +36,7 @@
   z-index: 1;
 }
 
-/* === Contenido visual de cada modal (login, registro, recuperar) === */
+/* Contenido visual de cada modal (login, registro, recuperar) */
 .auth-modal {
   background: var(--blanco);
   padding: 2rem;
@@ -49,13 +49,13 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* === Título === */
+/*  Título  */
 .auth-modal h2 {
   margin-bottom: 1rem;
   color: var(--negro-secundario);
 }
 
-/* === Formulario === */
+/* Formulario */
 .auth-modal form {
   flex-grow: 1;
   display: flex;
@@ -72,7 +72,7 @@
   font-size: 1rem;
 }
 
-/* === Checkbox "Recuérdame" (solo login) === */
+/* Checkbox "Recuérdame" (solo login) */
 .remember-me {
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@
   justify-content: flex-start;
 }
 
-/* === Enlaces de acción (registro, recuperar) === */
+/* Enlaces de acción (registro, recuperar) */
 .auth-links {
   display: flex;
   flex-direction: column;
@@ -102,7 +102,7 @@
   text-decoration: underline;
 }
 
-/* === Mobile (responsive) === */
+/* Mobile (responsive) */
 @media (max-width: 480px) {
   .auth-modal {
     padding: 1.5rem;
